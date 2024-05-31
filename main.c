@@ -151,13 +151,16 @@ int main(void)
 						 /* clear LCD display */
 						LCD_command(1);
 						delayMs(500);
-					
+						
 						--tries;
+						int f = tries + 48;
 						LCD_data('W');
 						LCD_data('R');
 						LCD_data('O');
 						LCD_data('N');
 						LCD_data('G');
+						LCD_data(' ');
+						LCD_data(f);
 						writeLEDs(0xF);
 						k=0;
 					  count=0;
